@@ -61,6 +61,8 @@ def chatbot():
     }
     
     store_status = {store: random.choice([True, False]) for store in mall_graph.keys()}  # Random open/closed status
+    store_status['Exit'] = True  # Exit is always open
+    
     maze = generate_maze(5)  # Generate a 5x5 maze for mall layout
     
     while True:
